@@ -82,3 +82,36 @@ This repo includes automated checks (`.github/workflows/classroom.yml`) that ver
 - no virtual environment was committed
 
 These checks cover the mechanical parts of the assignment. Your README explanations and homework answers are graded separately by your instructor.
+
+
+## Answers to Homework Questions (answer in your README)
+
+1. In your own words, explain the difference between a project and an app.
+A project is the entire website configuration, settings, and database setup. It acts as the overall container for thr whole website.
+An app is a focused, self-contained module within the project that handles one specific feature (e.g., a "journaling" app, a "contact form" app, or a "user authentication" app). 
+A project can contain multiple apps.
+
+
+
+
+2. What command creates a new Django app?
+python manage.py startapp app_name 
+(Replace app_name with the actual name of the app)
+
+
+
+
+3. Why do we register an app inside `INSTALLED_APPS`?
+Django needs to be explicitly told that the new app exists. 
+Registering it inside INSTALLED_APPS allows Django to look inside that app for models (to create database tables), templates, management commands, and admin panels. 
+Without this step, Django will completely ignore the app.
+
+
+
+
+4. What does giving a URL a `name=` actually let you do later?
+Giving a URL a name= gives that specific webpage link a permanent nickname.
+Instead of typing out the exact web address everywhere in your code, you just use the nickname.
+This means if you decide to change the web address later, you only have to change it in one single place (urls.py). Django will automatically update the link everywhere else across your entire website so nothing breaks.
+
+
